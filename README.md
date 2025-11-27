@@ -25,7 +25,7 @@ A production-ready MERN stack application for managing tasks with a clean MVC ar
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/yavishsahrawat40/Personal-Task-Manager.git
 cd productivity-dashboard
 ```
 
