@@ -20,7 +20,7 @@ const Dashboard = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get('http://localhost:5000/api/tasks', config);
+      const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/tasks`, config);
       setTasks(data);
     } catch (error) {
       console.error('Error fetching tasks', error);
@@ -43,9 +43,9 @@ const Dashboard = () => {
 
     try {
       if (isEditing) {
-        await axios.put(`http://localhost:5000/api/tasks/${currentTask._id}`, currentTask, config);
+        await axios.put(`${import.meta.env.VITE_API_URL}/api/tasks/${currentTask._id}`, currentTask, config);
       } else {
-        await axios.post('http://localhost:5000/api/tasks', currentTask, config);
+        await axios.post(`${import.meta.env.VITE_API_URL}/api/tasks`, currentTask, config);
       }
       fetchTasks();
       closeModal();
@@ -62,7 +62,7 @@ const Dashboard = () => {
             Authorization: `Bearer ${user.token}`,
           },
         };
-        await axios.delete(`http://localhost:5000/api/tasks/${id}`, config);
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/tasks/${id}`, config);
         fetchTasks();
       } catch (error) {
         console.error('Error deleting task', error);
@@ -80,7 +80,7 @@ const Dashboard = () => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      await axios.put(`http://localhost:5000/api/tasks/${id}`, { status: updatedStatus }, config);
+      await axios.put(`${import.meta.env.VITE_API_URL}/api/tasks/${id}`, { status: updatedStatus }, config);
       fetchTasks();
     } catch (error) {
       console.error('Error updating status', error);
