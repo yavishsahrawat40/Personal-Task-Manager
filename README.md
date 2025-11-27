@@ -83,7 +83,7 @@ The application will run on `http://localhost:5173`.
 
 Screen Recording: https://drive.google.com/file/d/1sv1gpLyHMwIuTOf8vGB7PvogqKAGoHfE/view?usp=drive_link
 
-Live Demo: https://personal-task-manager-snowy.vercel.app/login
+Live Demo: https://personal-task-manager-snowy.vercel.app
 
 ## Usage
 
